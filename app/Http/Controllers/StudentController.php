@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
@@ -11,5 +12,10 @@ class StudentController extends Controller
     public function __construct(Student $student)
     {
        $this->student = $student;
+    }
+
+    public function s_index()
+    {
+        return view('student.index');
     }
 }
