@@ -21,28 +21,43 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="container">
+            {{-- min-h-screen bg-gray-100 dark:bg-gray-900 --}}
             @include('layouts.navigation')
 
             <!-- Page Heading -->
-            @if (isset($header))
+            {{-- @if (isset($header))
                 <header class="bg-white dark:bg-gray-800 shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
-            @endif
+            @endif --}}
 
             <!-- Page Content -->
             <main>
-                <div class="row">           
-                    <div class="col-4">
-                    </div>
-                    <div class="col-8">
-                        {{-- {{ $slot }} --}}
+                <div class="container p-3">
+                    <div class="row justify-content-center">           
+                        <div class="col-3 p-3">
+                            <div class="list-group shadow-sm">
+                                <a href="#" class="list-group-item ">
+                                    予約スケジュール
+                                </a><br>
+                            
+                                <a href="#" class="list-group-item ">
+                                    レッスン予約
+                                </a><br>
+                            
+                                <a href="#" class="list-group-item ">
+                                    受講済レッスン                                
+                                </a><br>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                             {{-- {{ $slot }} --}}
+                        </div>
                     </div>
                 </div>
-                
             </main>
         </div>
     </body>
